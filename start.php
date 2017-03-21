@@ -56,7 +56,7 @@ function usericon_url($hook, $type, $return, $params) {
 	// if we have metadata in $check and not in $metadata, it's because we're not allowed to see it
 	if (!$metadata && $check) {
 		$size = $params['size'];
-		return "_graphics/icons/user/default{$size}.gif";
+		return elgg_get_simplecache_url("icons/user/default{$size}.gif");
 	}
 	
 	return $return;
